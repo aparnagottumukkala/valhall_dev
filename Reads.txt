@@ -1,0 +1,21 @@
+Old url 
+ec2-54-169-190-203.ap-southeast-1.compute.amazonaws.com:
+
+
+
+{"shape":[ {
+            "lat": "1.344106737524271",
+            "lng": "103.70541256852448"
+          },
+          {
+            "lat": "1.3441288657486439",
+            "lng": "103.70642342604697"
+          },
+          {
+            "lat": "1.3441713200882077",
+            "lng": "103.70606509968638"
+          },
+          {
+            "lat": "1.3441713200882077",
+            "lng": "103.70606509968638"
+          }],"costing":"auto","shape_match":"map_snap","filters":{"attributes":["edge.names","edge.begin_shape_index","edge.end_shape_index","shape"],"action":"include"}}
