@@ -5,7 +5,7 @@
   "httpd": {
     "service": {
       "interrupt": "ipc:///tmp/interrupt",
-      "listen": "tcp://*:8002",
+      "listen": "tcp://localhost:8002",
       "loopback": "ipc:///tmp/loopback"
     }
   },
@@ -14,7 +14,6 @@
       "locate",
       "route",
       "height",
-      "one_to_many",
       "many_to_one",
       "many_to_many",
       "sources_to_targets",
