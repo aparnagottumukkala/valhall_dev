@@ -5,7 +5,7 @@
   "httpd": {
     "service": {
       "interrupt": "ipc:///tmp/interrupt",
-      "listen": "tcp://localhost:8002",
+      "listen": "tcp://*:8002",
       "loopback": "ipc:///tmp/loopback"
     }
   },
