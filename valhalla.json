@@ -15,6 +15,7 @@
       "route",
       "height",
       "optimized_route",
+      "sources_to_targets",
       "isochrone",
       "trace_route",
       "trace_attributes",
