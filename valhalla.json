@@ -14,8 +14,8 @@
       "locate",
       "route",
       "height",
-      "optimized_route",
       "sources_to_targets",
+      "optimized_route",
       "isochrone",
       "trace_route",
       "trace_attributes",
@@ -31,14 +31,18 @@
       "proxy": "ipc:///tmp/loki"
     },
     "service_defaults": {
+      "heading_tolerance": 60,
       "minimum_reachability": 50,
-      "radius": 0
+      "node_snap_tolerance": 5,
+      "radius": 0,
+      "search_cutoff": 35000,
+      "street_side_tolerance": 5
     },
     "use_connectivity": true
   },
   "meili": {
     "auto": {
-      "search_radius": 250,
+      "search_radius": 100,
       "turn_penalty_factor": 200
     },
     "bicycle": {
@@ -49,6 +53,7 @@
       "search_radius",
       "turn_penalty_factor",
       "gps_accuracy",
+      "interpolation_distance",
       "sigma_z",
       "beta",
       "max_route_distance_factor",
@@ -92,18 +97,27 @@
   },
   "mjolnir": {
     "admin": "/home/ubuntu/sg_rail/valhalla_tiles/admins.sqlite",
+    "global_synchronized_cache": false,
     "hierarchy": true,
+    "import_bike_share_stations": false,
+    "include_bicycle": true,
+    "include_driveways": true,
+    "include_driving": true,
+    "include_pedestrian": true,
     "logging": {
       "color": true,
       "file_name": "path_to_some_file.log",
       "type": "std_out"
     },
+    "lru_mem_cache_hard_control": false,
     "max_cache_size": 1000000000,
+    "max_concurrent_reader_users": 1,
     "shortcuts": true,
     "tile_dir": "/home/ubuntu/sg_rail/valhalla_tiles",
     "tile_extract": "/home/ubuntu/sg_rail/valhalla_tiles.tar",
     "timezone": "/home/ubuntu/sg_rail/valhalla_tiles/timezones.sqlite",
-    "transit_dir": "/data/valhalla/transit"
+    "transit_dir": "/data/valhalla/transit",
+    "use_lru_mem_cache": false
   },
   "odin": {
     "logging": {
@@ -152,10 +166,18 @@
       "max_locations": 1,
       "max_time": 120
     },
+    "max_alternates": 2,
     "max_avoid_locations": 50,
     "max_radius": 200,
     "max_reachability": 100,
+    "max_timedep_distance": 500000,
     "motor_scooter": {
+      "max_distance": 500000.0,
+      "max_locations": 50,
+      "max_matrix_distance": 200000.0,
+      "max_matrix_locations": 50
+    },
+    "motorcycle": {
       "max_distance": 500000.0,
       "max_locations": 50,
       "max_matrix_distance": 200000.0,
@@ -178,6 +200,12 @@
     "skadi": {
       "max_shape": 750000,
       "min_resample": 10.0
+    },
+    "taxi": {
+      "max_distance": 5000000.0,
+      "max_locations": 20,
+      "max_matrix_distance": 400000.0,
+      "max_matrix_locations": 50
     },
     "trace": {
       "max_best_paths": 4,
